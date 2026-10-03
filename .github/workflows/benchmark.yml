@@ -1,0 +1,30 @@
+name: Performance Benchmark
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'src/**'
+      - 'models/**'
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
+        python -m pip install --upgrade pip
+        pip install -e .
+
+    - name: Run automated latency & FPS benchmark
+      run: |
+        python scripts/benchmark.py --steps 300

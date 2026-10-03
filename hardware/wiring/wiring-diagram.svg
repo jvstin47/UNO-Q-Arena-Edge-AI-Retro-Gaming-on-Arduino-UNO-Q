@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #0f172a; }
+      .box { fill: #1e293b; stroke: #38bdf8; stroke-width: 2; rx: 8; }
+      .box-mcu { fill: #1e293b; stroke: #4ade80; stroke-width: 2; rx: 8; }
+      .box-io { fill: #1e293b; stroke: #f43f5e; stroke-width: 2; rx: 8; }
+      .box-disp { fill: #1e293b; stroke: #fbbf24; stroke-width: 2; rx: 8; }
+      .wire { stroke-width: 2; fill: none; }
+      .wire-gnd { stroke: #64748b; }
+      .wire-pwr { stroke: #ef4444; }
+      .wire-sig { stroke: #38bdf8; }
+      .wire-i2c { stroke: #fbbf24; }
+      .text-title { font-family: monospace; font-size: 16px; font-weight: bold; fill: #f8fafc; }
+      .text-sub { font-family: monospace; font-size: 12px; fill: #94a3b8; }
+      .text-pin { font-family: monospace; font-size: 11px; fill: #e2e8f0; }
+    </style>
+  </defs>
+
+  <rect width="900" height="600" class="bg" />
+
+  <!-- Title -->
+  <text x="450" y="35" class="text-title" text-anchor="middle">UNO Q ARENA - HARDWARE WIRING &amp; PINOUT ARCHITECTURE</text>
+  <text x="450" y="55" class="text-sub" text-anchor="middle">STM32 Cortex-M33 (Nerves) &lt;--&gt; Peripherals &amp; Qualcomm QRB2210 (Brain)</text>
+
+  <!-- Central Arduino UNO Q Box -->
+  <rect x="320" y="90" width="260" height="460" class="box" />
+  <text x="450" y="120" class="text-title" text-anchor="middle" fill="#38bdf8">ARDUINO UNO Q</text>
+
+  <!-- MPU Sub-box -->
+  <rect x="340" y="140" width="220" height="90" class="box" style="stroke:#60a5fa;" />
+  <text x="450" y="165" class="text-title" text-anchor="middle" font-size="13">Qualcomm QRB2210</text>
+  <text x="450" y="185" class="text-sub" text-anchor="middle">Linux MPU (Emulation &amp; AI)</text>
+  <text x="450" y="210" class="text-pin" text-anchor="middle" fill="#38bdf8">HDMI Out | 44.1kHz Audio | IPC</text>
+
+  <!-- RPMsg / IPC Bridge -->
+  <path d="M 450 230 L 450 270" stroke="#f43f5e" stroke-width="3" stroke-dasharray="4" />
+  <text x="455" y="255" class="text-pin" fill="#f43f5e">RPMsg / UART</text>
+
+  <!-- MCU Sub-box -->
+  <rect x="340" y="270" width="220" height="260" class="box-mcu" />
+  <text x="450" y="295" class="text-title" text-anchor="middle" fill="#4ade80" font-size="13">STM32 Cortex-M33</text>
+  <text x="450" y="315" class="text-sub" text-anchor="middle">Deterministic Real-Time I/O</text>
+
+  <!-- Left: Arcade Controls -->
+  <rect x="30" y="120" width="220" height="420" class="box-io" />
+  <text x="140" y="150" class="text-title" text-anchor="middle" fill="#f43f5e">ARCADE DECK</text>
+  <text x="140" y="170" class="text-sub" text-anchor="middle">Sanwa Joystick &amp; Buttons</text>
+
+  <text x="50" y="210" class="text-pin">D-Pad (Up, Down, L, R)</text>
+  <text x="50" y="240" class="text-pin">Light/Med/Hvy Punches</text>
+  <text x="50" y="270" class="text-pin">Light/Med/Hvy Kicks</text>
+  <text x="50" y="300" class="text-pin">Start &amp; Mode Switches</text>
+  <text x="50" y="340" class="text-pin" fill="#94a3b8">Pins: D0, D1, D2, D3,</text>
+  <text x="50" y="360" class="text-pin" fill="#94a3b8">      D4, D6, D7, D10,</text>
+  <text x="50" y="380" class="text-pin" fill="#94a3b8">      D11, D12, D13, D14</text>
+  <text x="50" y="420" class="text-pin" fill="#4ade80">Active Low (Internal Pullup)</text>
+
+  <!-- Right: Feedback & Peripherals -->
+  <!-- OLED -->
+  <rect x="650" y="100" width="210" height="100" class="box-disp" />
+  <text x="755" y="125" class="text-title" text-anchor="middle" fill="#fbbf24">SSD1306 OLED</text>
+  <text x="755" y="145" class="text-sub" text-anchor="middle">128x64 I2C Telemetry HUD</text>
+  <text x="670" y="175" class="text-pin">SDA (PB9) | SCL (PB8)</text>
+
+  <!-- Aggression Pot -->
+  <rect x="650" y="220" width="210" height="90" class="box" />
+  <text x="755" y="245" class="text-title" text-anchor="middle" fill="#38bdf8">AGGRESSION DIAL</text>
+  <text x="755" y="265" class="text-sub" text-anchor="middle">10k Linear Potentiometer</text>
+  <text x="670" y="295" class="text-pin">Analog In: A0 (PA0)</text>
+
+  <!-- NeoPixel -->
+  <rect x="650" y="330" width="210" height="90" class="box-mcu" />
+  <text x="755" y="355" class="text-title" text-anchor="middle" fill="#4ade80">NEOPIXEL BAR</text>
+  <text x="755" y="375" class="text-sub" text-anchor="middle">8x WS2812B RGB LED</text>
+  <text x="670" y="405" class="text-pin">Data In: D5 (PB5)</text>
+
+  <!-- Haptics -->
+  <rect x="650" y="440" width="210" height="100" class="box-io" />
+  <text x="755" y="465" class="text-title" text-anchor="middle" fill="#f43f5e">HAPTIC MOTOR</text>
+  <text x="755" y="485" class="text-sub" text-anchor="middle">PWM Solenoid / ERM Motor</text>
+  <text x="670" y="515" class="text-pin">Gate PWM: D9 (PA5)</text>
+
+  <!-- Connecting Wires -->
+  <path d="M 250 280 L 340 380" class="wire wire-sig" />
+  <path d="M 560 350 L 650 150" class="wire wire-i2c" />
+  <path d="M 560 400 L 650 265" class="wire wire-sig" />
+  <path d="M 560 440 L 650 375" class="wire wire-sig" />
+  <path d="M 560 480 L 650 490" class="wire wire-pwr" />
+
+</svg>

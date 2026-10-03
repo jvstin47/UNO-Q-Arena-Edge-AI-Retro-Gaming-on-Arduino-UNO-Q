@@ -1,0 +1,7 @@
+game: "combat_cars"
+ai_agent_type: "racing"
+ai_difficulty: 75
+target_fps: 60
+audio_enabled: true
+display_scale: 4
+state_file: "1Player.Jackyl.Level1"

@@ -1,0 +1,7 @@
+game: "sf2"
+ai_agent_type: "heuristic"
+ai_difficulty: 65
+target_fps: 60
+audio_enabled: true
+display_scale: 4
+state_file: "roms/sf2_versus.state"

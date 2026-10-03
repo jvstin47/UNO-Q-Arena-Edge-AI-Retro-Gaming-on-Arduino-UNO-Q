@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #090d16; }
+      .box-mpu { fill: #111827; stroke: #38bdf8; stroke-width: 2.5; rx: 12; }
+      .box-mcu { fill: #111827; stroke: #4ade80; stroke-width: 2.5; rx: 12; }
+      .box-card { fill: #1f2937; stroke: #374151; stroke-width: 1.5; rx: 6; }
+      .box-ipc { fill: #1e1b4b; stroke: #818cf8; stroke-width: 2; stroke-dasharray: 6; rx: 8; }
+      .text-head { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 20px; font-weight: 800; fill: #f8fafc; }
+      .text-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: #f1f5f9; }
+      .text-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; fill: #94a3b8; }
+      .text-chip { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 11px; font-weight: 600; fill: #cbd5e1; }
+      .arrow { stroke: #38bdf8; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead); }
+      .arrow-green { stroke: #4ade80; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead-green); }
+      .arrow-ipc { stroke: #818cf8; stroke-width: 3; fill: none; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#38bdf8" />
+    </marker>
+    <marker id="arrowhead-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4ade80" />
+    </marker>
+  </defs>
+
+  <rect width="1000" height="620" class="bg" />
+
+  <!-- Top Title Banner -->
+  <text x="500" y="45" class="text-head" text-anchor="middle">ARDUINO UNO Q HETEROGENEOUS DUAL-BRAIN SYSTEM ARCHITECTURE</text>
+  <text x="500" y="70" class="text-sub" text-anchor="middle">Concurrent High-Throughput Edge AI &amp; Sub-Millisecond Deterministic Real-Time I/O</text>
+
+  <!-- Left: Qualcomm Linux MPU ("The Brain") -->
+  <rect x="50" y="100" width="410" height="430" class="box-mpu" />
+  <text x="255" y="135" class="text-head" text-anchor="middle" fill="#38bdf8">QUALCOMM QRB2210</text>
+  <text x="255" y="155" class="text-sub" text-anchor="middle">Linux MPU &bull; "The Brain" (Computation &amp; AI)</text>
+
+  <!-- Libretro Engine -->
+  <rect x="75" y="180" width="360" height="90" class="box-card" />
+  <text x="95" y="210" class="text-title" fill="#38bdf8">Libretro Emulation Core</text>
+  <text x="95" y="232" class="text-sub">60 FPS Genesis Emulation &bull; RAM Telemetry Extraction</text>
+  <text x="95" y="252" class="text-chip" fill="#67e8f9">44.1 kHz Stereo PCM Audio &bull; HDMI 1080p60</text>
+
+  <!-- AI Inference Policy -->
+  <rect x="75" y="290" width="360" height="100" class="box-card" />
+  <text x="95" y="320" class="text-title" fill="#a855f7">Edge AI Policy Engine</text>
+  <text x="95" y="342" class="text-sub">Quantized ONNX MobileNet / Heuristic Combat FSM</text>
+  <text x="95" y="362" class="text-chip" fill="#c084fc">Latency: 1.05 ms &bull; Sub-frame Player 2 Actions</text>
+
+  <!-- Display & HUD -->
+  <rect x="75" y="410" width="360" height="90" class="box-card" />
+  <text x="95" y="440" class="text-title" fill="#38bdf8">Pygame UI &amp; HUD Renderer</text>
+  <text x="95" y="462" class="text-sub">Dual-Brain Telemetry Overlay &bull; Latency Distribution</text>
+  <text x="95" y="482" class="text-chip" fill="#67e8f9">Live FPS &bull; Health Meters &bull; Combo Interrupts</text>
+
+  <!-- Right: STM32 Cortex-M33 MCU ("The Nerves") -->
+  <rect x="540" y="100" width="410" height="430" class="box-mcu" />
+  <text x="745" y="135" class="text-head" text-anchor="middle" fill="#4ade80">STM32 CORTEX-M33</text>
+  <text x="745" y="155" class="text-sub" text-anchor="middle">Real-Time MCU &bull; "The Nerves" (Physical I/O)</text>
+
+  <!-- 1 kHz Input Scanner -->
+  <rect x="565" y="180" width="360" height="75" class="box-card" />
+  <text x="585" y="210" class="text-title" fill="#4ade80">1,000 Hz Arcade Switch Scanner</text>
+  <text x="585" y="232" class="text-sub">12 GPIOs &bull; Hardware Debounce &bull; Zero Jitter Bitmask</text>
+
+  <!-- Dynamic Aggression Dial -->
+  <rect x="565" y="270" width="360" height="75" class="box-card" />
+  <text x="585" y="300" class="text-title" fill="#fbbf24">Dynamic Aggression Dial</text>
+  <text x="585" y="322" class="text-sub">12-bit ADC Continuous Sampling &bull; Real-time AI Difficulty</text>
+
+  <!-- Haptic & NeoPixels -->
+  <rect x="565" y="360" width="360" height="75" class="box-card" />
+  <text x="585" y="390" class="text-title" fill="#f43f5e">Haptic PWM &amp; NeoPixel LEDs</text>
+  <text x="585" y="412" class="text-sub">Low-latency Damage Vibration &bull; WS2812B Health Bars</text>
+
+  <!-- Hardware OLED HUD -->
+  <rect x="565" y="450" width="360" height="60" class="box-card" />
+  <text x="585" y="475" class="text-title" fill="#60a5fa">SSD1306 128x64 OLED</text>
+  <text x="585" y="495" class="text-sub">I2C Real-time Hardware Telemetry Display</text>
+
+  <!-- Middle: Inter-Processor Communication (IPC) Bridge -->
+  <path d="M 460 225 L 540 225" class="arrow-ipc" />
+  <path d="M 540 340 L 460 340" class="arrow-ipc" />
+
+  <rect x="425" y="240" width="150" height="70" class="box-ipc" />
+  <text x="500" y="265" class="text-chip" text-anchor="middle" fill="#c7d2fe">BINARY FRAMED IPC</text>
+  <text x="500" y="283" class="text-sub" text-anchor="middle" fill="#a5b4fc">RPMsg / UART</text>
+  <text x="500" y="299" class="text-sub" text-anchor="middle" fill="#818cf8">&lt; 0.5 ms Latency</text>
+
+  <!-- Bottom Legend -->
+  <text x="500" y="580" class="text-sub" text-anchor="middle" fill="#64748b">
+    UNO Q Arena &bull; Open-Source Dual-Brain Edge AI Retro Gaming Platform &bull; Apache-2.0 / MIT
+  </text>
+</svg>

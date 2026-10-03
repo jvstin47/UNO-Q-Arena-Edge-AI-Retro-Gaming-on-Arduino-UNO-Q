@@ -1,0 +1,67 @@
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments & Packaging
+.venv/
+venv/
+env/
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# IDE & OS Metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ROMs and Disc Images (Strictly Ignored - Do NOT commit commercial binaries)
+roms/*
+!roms/.gitkeep
+cores/*
+!cores/.gitkeep
+
+*.iso
+*.chd
+*.gba
+*.gb
+*.gbc
+*.nes
+*.sfc
+*.smc
+*.bin
+*.gen
+*.smd
+*.zip
+*.7z
+*.rar
+
+# Save States & SRAM
+*.state
+*.sav
+*.srm
+
+# Firmware Build Artifacts
+firmware/stm32/build/
+firmware/stm32/.pio/
+*.hex
+*.elf
+
+# Model Weight Caches (Keep small demo policies, ignore large training runs)
+*.onnx.data
+*.ckpt
+*.pt
+*.pth
+experiments/runs/

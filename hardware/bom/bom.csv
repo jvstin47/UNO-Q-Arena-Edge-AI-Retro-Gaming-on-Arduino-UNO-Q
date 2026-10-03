@@ -1,0 +1,16 @@
+Item #,Part Name,Description,Quantity,Reference Designator,Estimated Cost (USD)
+1,Arduino UNO Q,Dual-Brain Dev Board (Qualcomm QRB2210 + STM32 Cortex-M33),1,U1,89.00
+2,Sanwa JLF-TP-8YT,Arcade 8-Way Microswitch Joystick,1,J1,24.00
+3,Sanwa OBSF-30,30mm Arcade Snap-In Pushbuttons (6-button layout),6,SW1-SW6,18.00
+4,Sanwa OBSF-24,24mm Utility Buttons (Start / Mode),2,SW7-SW8,5.00
+5,SSD1306 OLED,0.96 inch 128x64 I2C Display Module,1,DISP1,4.50
+6,WS2812B NeoPixel Strip,8-LED Addressable 5V RGB LED Bar,1,LED1,3.50
+7,10k Linear Potentiometer,Panel Mount Alpha Potentiometer (Aggression Dial),1,POT1,1.80
+8,Haptic ERM Motor / Solenoid,1034 Coin Vibration Motor or 5V Solenoid Actuator,1,M1,3.20
+9,2N2222 / MOSFET Driver,N-Channel Gate Driver for Haptic PWM,1,Q1,0.50
+10,Flyback Diode (1N4001),Reverse EMF Protection Diode for Haptic Motor,1,D1,0.20
+11,Micro-HDMI to HDMI Cable,4K/60Hz Video Output Cable,1,CBL1,6.00
+12,USB-C Power Supply,5V 3A High-Current Power Adapter,1,PSU1,12.00
+13,Laser-Cut Acrylic Deck,Top & Bottom Plates for Arcade Fighting Enclosure,1,CASE1,25.00
+14,Jumper Wires & Harness,22 AWG Dupont / Quick-Disconnect Wire Harness,1,W1,5.00
+,,,,Total Estimated Cost:,197.70

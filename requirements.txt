@@ -1,0 +1,14 @@
+# UNO Q Arena - Production Dependencies
+# Compatible with Python 3.10 - 3.12 (macOS ARM64 & Linux x86_64 / Arm64)
+
+stable-retro>=1.0.1
+pygame>=2.5.0
+onnxruntime>=1.17.0
+onnx>=1.16.0
+numpy>=1.26.0
+pyyaml>=6.0
+pyserial>=3.5
+
+# Development & Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0

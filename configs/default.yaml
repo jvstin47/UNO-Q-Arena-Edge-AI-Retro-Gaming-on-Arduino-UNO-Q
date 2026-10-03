@@ -1,0 +1,12 @@
+game: "sf2"
+ipc_mode: "serial"
+ipc_port: null
+headless: false
+fullscreen: false
+display_width: 1280
+display_height: 896
+target_fps: 60
+audio_enabled: true
+ai_agent_type: "heuristic"
+ai_model_path: "models/policies/sample_policy.onnx"
+ai_difficulty: 50

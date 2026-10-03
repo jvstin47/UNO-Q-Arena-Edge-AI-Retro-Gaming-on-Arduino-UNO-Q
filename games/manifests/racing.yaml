@@ -1,0 +1,31 @@
+id: "racing"
+name: "Combat Cars"
+platform: "sega_genesis"
+retro_game_id: "CombatCars-Genesis-v0"
+genre: "racing"
+players: 2
+
+rom:
+  filename: "Combat Cars (USA, Europe).md"
+  sha256: "8e8e7a68e82ef6bcf31b9dca2ebbf9ad0e58d3433a7d5cb4b2bf6a9bbbebf41c"
+  notes: "User must legally provide their own Genesis ROM."
+
+states:
+  default: "1Player.Jackyl.Level1"
+
+ram_offsets:
+  p1_speed: 0x008020
+  p2_speed: 0x008060
+  p1_lap: 0x008040
+  p2_lap: 0x008080
+
+audio:
+  sample_rate: 44100
+  channels: 2
+  format: "int16"
+
+controls:
+  layout: "genesis_3_button_racing"
+  throttle: "B"
+  weapon: "A"
+  brake: "C"

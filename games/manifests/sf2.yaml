@@ -1,0 +1,31 @@
+id: "sf2"
+name: "Street Fighter II': Special Champion Edition"
+platform: "sega_genesis"
+retro_game_id: "StreetFighterIISpecialChampionEdition-Genesis-v0"
+genre: "fighting"
+players: 2
+
+rom:
+  filename: "Street Fighter II' - Special Champion Edition (USA).md"
+  sha256: "b62a4d0cb53f19129e71b2d07e53995874c79c8d50df5fe85d774aa5f17d3b84"
+  notes: "User must legally provide their own Genesis ROM."
+
+states:
+  versus: "roms/sf2_versus.state"
+  arcade_ryu: "Champion.Level1.RyuVsGuile.state"
+
+ram_offsets:
+  p1_health: 0x00A024
+  p2_health: 0x00A224
+  p1_x: 0x00A008
+  p2_x: 0x00A208
+  timer: 0x00A400
+
+audio:
+  sample_rate: 44100
+  channels: 2
+  format: "int16"
+
+controls:
+  layout: "genesis_6_button"
+  buttons: ["B", "A", "MODE", "START", "UP", "DOWN", "LEFT", "RIGHT", "C", "Y", "X", "Z"]

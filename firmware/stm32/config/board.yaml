@@ -1,0 +1,59 @@
+board:
+  name: "Arduino UNO Q"
+  mcu: "STM32U585 / Cortex-M33"
+  clock_mhz: 160
+  flash_kb: 2048
+  ram_kb: 786
+
+peripherals:
+  uart:
+    port: "USART1"
+    baudrate: 115200
+    tx_pin: "PA9"
+    rx_pin: "PA10"
+    dma: true
+
+  rpmsg:
+    endpoint: "uno-q-ipc"
+    buffer_bytes: 512
+
+  i2c:
+    port: "I2C1"
+    speed_khz: 400
+    sda_pin: "PB9"
+    scl_pin: "PB8"
+    device: "SSD1306 OLED (128x64)"
+
+  adc:
+    port: "ADC1"
+    channel: 5
+    pin: "PA0"
+    resolution_bits: 12
+    device: "10k Linear Potentiometer (Aggression Dial)"
+
+  pwm:
+    timer: "TIM2"
+    channel: 1
+    pin: "PA5"
+    frequency_hz: 200
+    device: "ERM Haptic Vibration Motor / Solenoid Gate"
+
+  neopixel:
+    pin: "PB5"
+    num_leds: 8
+    type: "WS2812B"
+    dma_mode: "SPI_DMA"
+
+gpio_buttons:
+  p1_b:     { pin: "PB0", pull: "UP", active: "LOW" }
+  p1_a:     { pin: "PB1", pull: "UP", active: "LOW" }
+  p1_mode:  { pin: "PB2", pull: "UP", active: "LOW" }
+  p1_start: { pin: "PB3", pull: "UP", active: "LOW" }
+  p1_up:    { pin: "PB4", pull: "UP", active: "LOW" }
+  p1_down:  { pin: "PB6", pull: "UP", active: "LOW" }
+  p1_left:  { pin: "PB7", pull: "UP", active: "LOW" }
+  p1_right: { pin: "PB10", pull: "UP", active: "LOW" }
+  p1_c:     { pin: "PB11", pull: "UP", active: "LOW" }
+  p1_y:     { pin: "PB12", pull: "UP", active: "LOW" }
+  p1_x:     { pin: "PB13", pull: "UP", active: "LOW" }
+  p1_z:     { pin: "PB14", pull: "UP", active: "LOW" }
